@@ -21,6 +21,10 @@
     .panel { border: 2px solid #00ff00; padding: 20px; margin-top: 20px; width: 90%; max-width: 500px; background-color: #050505; }
     .panel h2 { text-align: center; margin-top: 0; text-shadow: 0 0 8px #00ff00; }
     .admin-link { color: #888; font-size: 14px; text-decoration: underline; cursor: pointer; margin-top: 20px; }
+    /* CSS MỚI ĐƯỢC THÊM */
+    .contact-admin { margin-top: 25px; font-size: 16px; color: #00ff00; text-align: center; }
+    .contact-admin a { color: #87CEEB; /* Sky Blue */ text-decoration: none; font-weight: bold; }
+    .contact-admin a:hover { text-decoration: underline; text-shadow: 0 0 8px #87CEEB; }
   </style>
 </head>
 <body>
@@ -31,6 +35,13 @@
   <h1>👤 NHẬP ID CỦA BẠN</h1>
   <input id="idInput" placeholder="Nhập ID đã được duyệt..." />
   <button onclick="checkId()">ĐĂNG NHẬP</button>
+  
+  <div class="contact-admin">
+    Liên hệ Admin để mua: 
+    <a href="https://t.me/concacokila" target="_blank">@concacokila</a> - 
+    <a href="https://t.me/ExTaiXiu2010" target="_blank">@ExTaiXiu2010</a> 🚀
+  </div>
+  
   <div id="userMessage" class="message"></div>
   <div class="admin-link" onclick="showAdminLogin()">Truy cập khu vực Admin</div>
 </div>
@@ -87,9 +98,16 @@ let adminCredentials = {
 };
 
 let approvedIDs = new Set([
-    "free1day", 
-    "danel", 
-    "extaixiu"
+    "Ap7wR2dX3q", 
+    "Zk5Jh9LtCv", 
+    "Bm8Nx1FsPj",
+    "Qc0Gy6UrEl",
+    "Vf3Hs4KoMw",
+    "Ew1Ib7XzRk",
+    "Ls9Pd5YgTu",
+    "Mj2Qr0CnAf",
+    "Xt6Vu8WoBi",
+    "lonbimxaokhe",
 ]); 
 
 function showUserLogin() {
@@ -126,7 +144,7 @@ function checkId() {
         messageDiv.style.color = 'lime';
         setTimeout(showTool, 1500);
     } else {
-        messageDiv.textContent = '❌ ID này chưa được duyệt! Vui lòng liên hệ Admin.';
+        messageDiv.textContent = '❌ ID này chưa được duyệt!';
         messageDiv.style.color = 'red';
     }
 }
